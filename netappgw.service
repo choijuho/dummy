@@ -6,7 +6,7 @@ After=network.target
 User=ubuntu
 Group=ubuntu
 LimitNOFILE=65535
-ExecStart=java -jar ~ubuntu/netapp-gw.jar -Xmx512M
+ExecStart=/usr/bin/java -jar /home/ubuntu/netapp-gw.jar -Xmx512M
 Restart=always
 SuccessExitStatus=143
 
