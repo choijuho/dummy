@@ -1,0 +1,14 @@
+[Unit]
+Description=Netapp API Gateway
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+LimitNOFILE=65535
+ExecStart=java -jar ~ubuntu/netapp-gw.jar -Xmx512M
+Restart=always
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
